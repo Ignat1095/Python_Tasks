@@ -6,10 +6,10 @@ def quart_input():
             return quarter
         else:
             print("Введите ЦЕЛОЕ число от 1 до 4")
-            quart_input()
+            return quart_input()
     except (ValueError, TypeError):
         print("Введите число от 1 до 4")
-        quart_input()
+        return quart_input()
 
 
 def range_coord(value):
