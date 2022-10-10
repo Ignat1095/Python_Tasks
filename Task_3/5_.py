@@ -3,28 +3,35 @@
 # Пример: для k = 8 список будет выглядеть так:
 # [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21] [Негафибоначчи]
 
+def nega_fib(n):
+    if n in (-1, 1, 2):
+        return 1
+    elif n == -2:
+        return -1
+    elif n <= 0:
+        return nega_fib(n + 2) - nega_fib(n + 1) # ^ Отрицательная формула
+    elif n > 0:
+        return nega_fib(n - 1) + nega_fib(n - 2) # ^ Положительная формула
 
-# def fib(n):
-#     if n in (1, 2):
+my_list = []
+
+k = int(input("input integer: "))
+for i in range(-k,k+1):
+    my_list.append(nega_fib(i))
+
+print(my_list)
+
+# def fib(n): # ^ Положительный фиббоначи
+#     if n in (-1, 1, 2):
 #         return 1
-#     return fib(n - 1) + fib(n - 2)
+#     elif n == -2:
+#         return -1
+#     else:
+#         return fib(n - 1) + fib(n - 2)
+# my_list = []
 
+# k = int(input("input integer: "))
+# for i in range(1,k+1):
+#     my_list.append(fib(i))
 
-# print(fib(8))
-
-
-# n = 8
-# f1 = 1
-# f2 = 1
-# fn = (n-1) + (n-2)
-# print(fn)
-
-
-# exit()
-f1 = 1
-f2 = 1
-n = 10  # int(input())
-print(f1, f2, end=' ')
-for i in range(2, n):
-    f1, f2 = f2, f1 + f2
-    print(f2, end=' ')
+# print(my_list)
