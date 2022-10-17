@@ -37,10 +37,10 @@ def mnogochlen(k):
 
 # mnogochlen(k)
 
-txt = open("4_1.txt", 'w')
+txt = open(r"Tasks.py\Task_4\4_1.txt", 'w')
 txt.write(''.join(map(str, mnogochlen(k))))
 txt.close()
 
-txt = open("4_2.txt", 'w')
+txt = open(r"Tasks.py\Task_4\4_2.txt", 'w')
 txt.write(''.join(map(str, mnogochlen(k))))
 txt.close()

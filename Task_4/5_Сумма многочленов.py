@@ -2,9 +2,9 @@
 # # содержащий сумму многочленов.
 
 # ! Работает только с одинаковой длинной коэфициентов.
-ffile1 = open('4_1.txt', 'r')
-ffile2 = open('4_2.txt', 'r')
-ffile3 = open('4_3.txt', 'w')
+ffile1 = open(r'Tasks.py\Task_4\4_1.txt', 'r')
+ffile2 = open(r'Tasks.py\Task_4\4_2.txt', 'r')
+ffile3 = open(r'Tasks.py\Task_4\4_3.txt', 'w')
 file1 = ffile1.readline()
 file2 = ffile2.readline()
 for i in range(len(file1)):
