@@ -1,5 +1,26 @@
 # # Даны два файла, в каждом из которых находится запись многочлена. Задача - сформировать файл,
 # # содержащий сумму многочленов.
+
+# ! Работает только с одинаковой длинной коэфициентов.
+ffile1 = open('4_1.txt', 'r')
+ffile2 = open('4_2.txt', 'r')
+ffile3 = open('4_3.txt', 'w')
+file1 = ffile1.readline()
+file2 = ffile2.readline()
+for i in range(len(file1)):
+    if file1[i-1] != '^':
+        if file1[i].isnumeric():
+            ffile3.write(str(int(file1[i])+int(file2[i])))
+        else:
+            ffile3.write(str(file1[i]))
+    else:
+        ffile3.write(str(file1[i]))
+
+
+ffile1.close
+ffile2.close
+ffile3.close
+
 # Aleksey, [07.10.2022 6:58]
 # например можно записать так 5*x^3 + 4*x^2 + 12*x + 5 = 0
 
