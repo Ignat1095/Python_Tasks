@@ -1,15 +1,15 @@
 # 1.Наишите программу, которая принимает на вход цифру,
 #   обознпачающую день недели, и проверяет, является ли этот день выходным.
 
-def Input_digit(input_text):
-    is_OK = False
-    while not is_OK:
-        try:
-            _digit = int(input(f"{input_text}"))
-            is_OK = True
-        except ValueError:
-            print('Это не число!')
-    return _digit
+
+def is_int(digit):
+    digit = (input("input_text: "))
+    try:
+        int(digit)
+        return int(digit)
+    except ValueError:
+        print('Это не число!')
+        return is_int(digit)
 
 
 def check_number(num):
@@ -24,5 +24,5 @@ def check_number(num):
         print("Это не день недели!")
 
 
-num = Input_digit("Введите число недели: ")
-check_number(num)
+digit = is_int("Введите число")
+check_number(digit)

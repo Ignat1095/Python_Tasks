@@ -6,6 +6,12 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
+
+a = list(map(int, input()))
+print(sum(a))
+
+exit()
+
 number = (input("input mumber: "))
 sum = 0
 for i in number:
