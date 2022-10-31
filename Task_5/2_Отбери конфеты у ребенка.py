@@ -30,7 +30,7 @@ if len(players) == 1:  # ^ Добавил бота в игру
 
 print("\nПутем несложной жеребьевки получаем следующую очередность хода ;D")
 shuffle(players)
-print(" "*10, "Играет:", players, "\n")
+print(" "*10, "Играет:", *players, "\n")
 
 
 max_count = len(players)

@@ -9,6 +9,14 @@ my_list = [1.1, 1.2, 3.1, 5, 10.012]
 print(my_list)
 round_list = []
 
+my_list2 = list((map(lambda x: round(x-int(x), 3), my_list)))
+
+print(my_list2)
+print(f'***** diff(max-min) = {max(my_list2)-min(my_list2)}')
+
+
+exit()
+
 for i in my_list:
     value_list = round(i - int(i), 2)
     round_list.append(value_list)

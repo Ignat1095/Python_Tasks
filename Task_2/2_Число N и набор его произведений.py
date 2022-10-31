@@ -3,13 +3,12 @@
 
 # Пример:
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
+while True:
+    number = [abs(int(input()))]  # int(input('Enter number: '))
 
-number = [3, 4]  # int(input('Enter number: '))
+    x = list(map(lambda num: 1 if num == 1 else num*(num-1), number))
 
-x = list(map(lambda num: 1 if num == 1 else num*(num-1), number))
-
-
-print(number, x)
+    print(*number, *x)
 
 exit()
 
